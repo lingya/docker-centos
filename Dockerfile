@@ -14,6 +14,6 @@ RUN rm -f /etc/ssh/ssh_host_dsa_key /etc/ssh/ssh_host_rsa_key && \
 # SSH login fix. Otherwise user is kicked off after login
 RUN sed -i '/pam_loginuid.so/c session    optional     pam_loginuid.so'  /etc/pam.d/sshd
 
-COPY init.sh /root/init.sh
-RUN chmod +x /root/init.sh
-CMD ./root/init.sh
+COPY ssh_init.sh /root/ssh_init.sh
+RUN chmod +x /root/ssh_init.sh
+CMD ./root/ssh_init.sh
