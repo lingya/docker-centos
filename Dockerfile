@@ -1,5 +1,5 @@
-FROM centos:centos6
-MAINTAINER FayeHuang
+FROM centos:centos7
+MAINTAINER lingya
 RUN yum -y update && yum -y upgrade
 
 RUN yum -y install openssh-clients openssh-server \
