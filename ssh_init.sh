@@ -1,5 +1,5 @@
 #!/bin/bash
-DEFAULT_ROOTPASSWORD=changeme
+DEFAULT_ROOTPASSWORD=root123
 if [ ${ROOTPASSWORD} ]; then
   echo "root:$ROOTPASSWORD" | chpasswd
 else
